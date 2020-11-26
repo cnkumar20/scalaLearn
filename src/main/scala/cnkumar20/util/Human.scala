@@ -1,15 +1,15 @@
-package cnkumar20.util
+  package cnkumar20.util
 
-class Human extends Home {
-  override def sleep(): Unit = {
-    println("I am Sleeping")
-  }
+  class Human extends Home {
+    override def sleep(): Unit = {
+      println("I am Sleeping")
+    }
 
-  override def play(): Unit = {
-    println("I am Awake")
+    override def play(): Unit = {
+      println("I am Awake")
+    }
+    
+    override def work(): Unit = {
+      println("I am working")
+    }
   }
-
-  override def work(): Unit = {
-    println("I am working")
-  }
-}
