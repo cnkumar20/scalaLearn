@@ -15,5 +15,5 @@ object Analyse extends App {
       case "1" => "One"
       case _ => "Any"
     }
-    println(m("1"))?
+    println(m("1"))
 }
