@@ -13,7 +13,7 @@ class Leetcode {
   def maxPosition(timeList:Array[Int]):Array[Int] = {
     //time = (9,29,39,59,60)
     //keys = (abcde)
-    var tempArray = Array[Int](timeList.length)
+    var tempArray = new Array[Int](timeList.length)
     var beg = 0
     for(i <- 0 to tempArray.length) {
       tempArray(i) = timeList(i) - beg
