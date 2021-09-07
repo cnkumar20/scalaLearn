@@ -13,22 +13,19 @@ class Leetcode {
   def maxPosition(timeList:Array[Int]):Array[Int] = {
     //time = (9,29,39,59,60)
     //keys = (abcde)
-    var arrTime = Array(timeList.length)
-    var posList = List[Int]()
+    var tempArray = Array[Int](timeList.length)
     var beg = 0
-    for(i <- 0 to arrTime.length) {
-      arrTime(i) = timeList(i) - beg
+    for(i <- 0 to tempArray.length) {
+      tempArray(i) = timeList(i) - beg
       beg = timeList(i)
     }
-    val temp = arrTime.zipWithIndex.filter(_._1==arrTime.max)
-    for(x <- 0 to temp.length) {
-      posList += temp(0)._1.toString
-    }
-    return posList.toArray
+    val pos = tempArray.zipWithIndex.filter(_._1 == tempArray.max)
+    pos.map(_._2.toInt).toArray
   }
-  def LongestKeyPressed(inputKeys:List[String],timeList:Array[Int]):String = {
-    val maxPosition(timeList)
-    return "asdf"
+  def LongestKeyPressed(inputKeys:List[Char],timeList:Array[Int]):Char = {
+    val postArray =  maxPosition(timeList)
+    val c = postArray.map(inputKeys(_))
+    c.max
   }
 
 
