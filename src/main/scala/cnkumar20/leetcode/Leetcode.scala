@@ -27,6 +27,19 @@ class Leetcode {
     val c = postArray.map(inputKeys(_))
     c.max
   }
+  def twoSum(nums: Array[Int], target: Int): Array[Int] = {
+    var sumMap = Map[Int,Int]()
+    nums.foreach(x => sumMap += (target-x -> x))
+    var res = Array[Int]()
+    for (x <- 0 to nums.size-1) {
+      println("Hello")
+      if(sumMap.contains(nums(x))) {
+        print("Kumar")
+        res = res:+x
+      }
+    }
+    res
+  }
 
 
 }
